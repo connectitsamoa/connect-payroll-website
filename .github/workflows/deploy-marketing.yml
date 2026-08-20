@@ -1,4 +1,4 @@
-name: Deploy Connect Payroll website
+name: Deploy Connect Payroll website to Azure
 
 on:
   push:
@@ -11,33 +11,41 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
-  group: pages
+  group: connect-payroll-public-azure
   cancel-in-progress: false
 
 jobs:
   deploy:
-    name: Publish marketing website
+    name: Publish website to Azure Static Web Apps
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Check out source
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
 
-      - name: Configure GitHub Pages
-        uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5
+      - name: Validate static website content
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f marketing/index.html
+          test -f marketing/privacy.html
+          test -f marketing/terms.html
+          test -f marketing/security.html
+          test -f marketing/support.html
+          test -f marketing/styles.css
+          test -f marketing/staticwebapp.config.json
+          if find marketing -type l -print -quit | grep -q .; then
+            echo "The website artifact must not contain symbolic links." >&2
+            exit 1
+          fi
 
-      - name: Upload website artifact
-        uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3
+      - name: Deploy reviewed static files
+        uses: Azure/static-web-apps-deploy@4d27395796ac319302594769cfe812bd207490b1 # v1 branch, pinned 2024-09-11
         with:
-          path: marketing
-
-      - name: Deploy website
-        id: deployment
-        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
+          action: upload
+          app_location: /marketing
+          output_location: ""
+          skip_app_build: true
