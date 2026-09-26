@@ -3,140 +3,408 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#06192d">
-    <meta name="description" content="Simple payroll software for Samoa businesses. Set up staff, enter pay, check PAYE, NPF and ACC, then create payslips and payment reports.">
-    <title>Connect Payroll | Simple payroll for Samoa businesses</title>
+    <meta name="theme-color" content="#f6f1e8">
+    <title>Connect Payroll | Payroll made for Samoa</title>
+    <meta name="description" content="Payroll software for Samoa businesses. Put in the hours and Connect Payroll works out PAYE, NPF and ACC, gets payslips and the bank list ready, and prints your P4. Made in Apia by Connect IT.">
+    <link rel="canonical" href="https://connectpayroll.ws/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Connect Payroll">
+    <meta property="og:title" content="Connect Payroll — payroll made for Samoa">
+    <meta property="og:description" content="Hours, PAYE, NPF and ACC worked out for you. Payslips, bank lists and your P4 ready in minutes. Made in Apia by Connect IT.">
+    <meta property="og:url" content="https://connectpayroll.ws/">
+    <meta property="og:image" content="https://connectpayroll.ws/assets/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_WS">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Connect Payroll — payroll made for Samoa">
+    <meta name="twitter:description" content="Hours, PAYE, NPF and ACC worked out for you. Made in Apia by Connect IT.">
+    <meta name="twitter:image" content="https://connectpayroll.ws/assets/og-image.jpg">
     <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
     <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    <link rel="preload" href="assets/fonts/lato-900.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/lato-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="styles.css">
+    <script src="assets/hero.js" defer></script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"Connect IT Ltd","url":"https://connectpayroll.ws/","logo":"https://connectpayroll.ws/assets/logo-96.png","telephone":"+685 27313","email":"sales@connectpayroll.ws","address":{"@type":"PostalAddress","addressLocality":"Apia","addressCountry":"WS"},"sameAs":["https://www.facebook.com/connectitsamoa"]},{"@type":"SoftwareApplication","name":"Connect Payroll","applicationCategory":"BusinessApplication","operatingSystem":"Web","areaServed":"WS","offers":[{"@type":"Offer","name":"Core","price":"69","priceCurrency":"WST","description":"WST 39 per month plus WST 5 per active employee, minimum WST 69 per month"},{"@type":"Offer","name":"Plus","price":"94","priceCurrency":"WST","description":"WST 59 per month plus WST 7 per active employee, minimum WST 94 per month"}]}]}</script>
   </head>
   <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-    <header class="site-header">
-      <div class="shell nav-wrap">
+    <a class="skip" href="#main">Skip to content</a>
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <div class="wrap topbar-inner">
         <a class="brand" href="#top" aria-label="Connect Payroll home">
-          <img class="brand-mark" src="assets/connect-payroll-mark.png" width="42" height="42" alt="">
-          <span><strong>Connect</strong><b>Payroll</b></span>
+          <img src="assets/logo-96.png" width="40" height="40" alt="">
+          <span><b>Connect</b> Payroll</span>
         </a>
-        <nav class="desktop-nav" aria-label="Main navigation">
-          <a href="#workflow">How it works</a>
-          <a href="#outputs">What you get</a>
-          <a href="#pricing">Plans</a>
-          <a href="#security">Security</a>
+        <nav class="nav" aria-label="Main">
+          <a href="#journey">How it works</a>
+          <a href="#product">Product</a>
+          <a href="#returns">P4 &amp; NPF</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#team">Local team</a>
           <a href="#contact">Contact</a>
         </nav>
-        <a class="button button-small button-outline" href="https://app.connectpayroll.ws">Sign in <span aria-hidden="true">↗</span></a>
+        <div class="topbar-actions">
+          <a class="btn btn-ghost" href="https://app.connectpayroll.ws">Sign in</a>
+          <a class="btn btn-primary" href="#contact">Talk to us</a>
+        </div>
+        <details class="menu">
+          <summary aria-label="Open menu"><span></span><span></span><span></span></summary>
+          <nav class="menu-panel" aria-label="Mobile">
+            <a href="#journey">How it works</a>
+            <a href="#product">Product</a>
+            <a href="#returns">P4 &amp; NPF returns</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#team">Local team</a>
+            <a href="#contact">Contact us</a>
+            <a class="btn btn-primary" href="tel:+68527313">Call +685 27313</a>
+            <a class="btn btn-ghost-dark" href="https://app.connectpayroll.ws">Sign in</a>
+          </nav>
+        </details>
       </div>
     </header>
 
     <main id="main">
-      <section class="hero" id="top">
-        <div class="hero-orbit orbit-one" aria-hidden="true"></div>
-        <div class="hero-orbit orbit-two" aria-hidden="true"></div>
-        <div class="shell hero-grid">
+      <!-- HERO: a local business owner on payday, with the pay run going out beside her -->
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-media"><img src="assets/people/shop-owner.jpg" width="1600" height="900" alt="A shop owner in Apia smiling at her counter while she does the week’s payroll on a laptop"></div>
+        <div class="wrap hero-grid">
           <div class="hero-copy">
-            <p class="eyebrow"><span></span> Made in Samoa, for Samoa</p>
-            <h1>Simple payroll for <em>Samoa businesses.</em></h1>
-            <p class="hero-lede">Set up your staff, enter their pay, check PAYE, NPF and ACC, then create payslips and payment reports—all in one place.</p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="mailto:sales@connectpayroll.ws?subject=Connect%20Payroll%20enquiry">Talk to our local team <span aria-hidden="true">→</span></a>
-              <a class="text-link" href="#workflow">See the three steps <span aria-hidden="true">↓</span></a>
-            </div>
-            <div class="proof-row" aria-label="Product highlights">
-              <span><i aria-hidden="true">✓</i> Works without a time clock</span>
-              <span><i aria-hidden="true">✓</i> Use your own pay schedule</span>
-              <span><i aria-hidden="true">✓</i> Local help when you need it</span>
+            <p class="kicker"><span class="dot"></span> Payroll software for businesses in Samoa</p>
+            <h1 id="hero-title"><span class="line"><span>Payroll</span></span> <span class="line"><span>made easy</span></span> <span class="line"><span class="accent">for Samoa.</span></span></h1>
+            <p class="lede">Put in the week’s hours and Connect Payroll does the rest: PAYE, NPF and ACC, payslips, the bank list, and your P4 at the end of the month. Most weeks you’re done in a few minutes.</p>
+            <div class="hero-cta">
+              <a class="btn btn-primary btn-lg" href="#contact">Get a free walkthrough <span aria-hidden="true">→</span></a>
+              <a class="btn btn-outline btn-lg" href="#journey">See how it works</a>
             </div>
           </div>
-          <div class="hero-visual" aria-label="Employee pay flowing into a checked payroll and finished reports">
-            <div class="visual-glow" aria-hidden="true"></div>
-            <img class="hero-art" src="assets/hero-payroll-flow.webp" width="1200" height="800" alt="Payroll journey from employee records to a completed pay run and reports">
-            <div class="motion-pill motion-pill-one" aria-hidden="true"><b>PAYE · NPF · ACC</b><span>Clear totals</span></div>
-            <div class="motion-pill motion-pill-two" aria-hidden="true"><b>Ready to finish</b><span>Checked by you</span></div>
+
+          <div class="payrun" role="img" aria-label="Example pay run: six staff paid on Wednesday 21 October, net pay WST 2,219.89">
+            <div class="payrun-head" aria-hidden="true">
+              <span class="payrun-icon">₮</span>
+              <div><b>Payday · Wed 21 Oct</b><small>Weekly payroll · 6 people</small></div>
+              <span class="payrun-badge">Approved</span>
+            </div>
+            <div class="payrun-bar" aria-hidden="true"><i></i></div>
+            <ul aria-hidden="true">
+                <li style="--i:0"><span class="avatar a1">MT</span><span class="who">Malia Tuilagi<small>Bank</small></span><b>347.40</b><span class="status"><span>Ready</span><span>Paid ✓</span></span></li>
+                <li style="--i:1"><span class="avatar a3">SL</span><span class="who">Sina Leota<small>Cash</small></span><b>344.80</b><span class="status"><span>Ready</span><span>Paid ✓</span></span></li>
+                <li style="--i:2"><span class="avatar a2">IA</span><span class="who">Iosefa Aiono<small>Bank</small></span><b>484.27</b><span class="status"><span>Ready</span><span>Paid ✓</span></span></li>
+                <li style="--i:3"><span class="avatar a4">LA</span><span class="who">Lupe Ah Sam<small>Cash</small></span><b>413.67</b><span class="status"><span>Ready</span><span>Paid ✓</span></span></li>
+            </ul>
+            <div class="payrun-total" aria-hidden="true"><span>Net pay</span><b>WST <span class="count-k"></span>,<span class="count-r"></span>.89</b></div>
+            <div class="payrun-toast" aria-hidden="true"><span class="tick sun">✓</span><div><b>Everyone paid</b><small>Fa’afetai! Payslips sent</small></div></div>
+          </div>
+        </div>
+
+        <div class="wrap hero-trust">
+          <p>Already paying their staff with Connect Payroll</p>
+          <ul>
+            <li><img src="assets/customers/connect-it.png" width="48" height="48" alt="">Connect IT</li>
+            <li><img src="assets/customers/elite-auto-detailing.jpg" width="48" height="48" alt="">Elite Auto Detailing</li>
+            <li><img src="assets/customers/holiday-homes-samoa.png" width="48" height="48" alt="">Holiday Homes Samoa</li>
+            <li><img src="assets/customers/emg-services.jpg" width="48" height="48" alt="">EMG Services</li>
+          </ul>
+        </div>
+      </section>
+
+      
+            <!-- JOURNEY -->
+      <section class="journey" id="journey" aria-labelledby="journey-title">
+        <div class="wrap journey-head reveal">
+          <p class="eyebrow">Aso totogi · How a pay week goes</p>
+          <h2 id="journey-title">From Monday’s first shift to <em>fa’afetai</em> on payday.</h2>
+          <p class="section-lede">Here’s a normal pay week, start to finish. The screens are the real app, with sample staff.</p>
+        </div>
+
+        <ol class="chapters">
+          <li class="chapter" id="step-team">
+            <div class="wrap chapter-grid">
+              <div class="chapter-copy reveal">
+                <p class="time"><span>01</span> Monday · 7:30am</p>
+                <h3>Set up your staff once.</h3>
+                <p>Put in each person’s pay rate, how often they’re paid, and whether it goes to the bank or in cash. Bus fares, allowances, social fund and loan repayments only need entering once. After that they come through every payday on their own.</p>
+                <ul class="ticks"><li>Paid weekly, fortnightly or monthly</li><li>By the hour, a set amount or a salary</li><li>A short explanation next to every field</li></ul>
+              </div>
+              <div class="chapter-art photo-stack reveal-art">
+                <img class="photo" src="assets/people/office-team.jpg" width="1448" height="1086" loading="lazy" alt="Three office workers in Apia laughing together over a laptop">
+                <div class="people-stack">
+                  <div class="person"><span class="avatar a1">MT</span><div><b>Malia Tuilagi</b><small>Barista · WST $10.50 an hour · Cash</small></div><span class="pill">NPF · ACC</span></div>
+                  <div class="person"><span class="avatar a2">IA</span><div><b>Iosefa Aiono</b><small>Manager · WST $650 a week · Bank</small></div><span class="pill">Social fund</span></div>
+                  <div class="person"><span class="avatar a3">SF</span><div><b>Salote Fa’amausili</b><small>Cashier · WST $8.50 an hour · Cash</small></div><span class="pill">Bus fare</span></div>
+                  <div class="person"><span class="avatar a4">TP</span><div><b>Tavita Pouono</b><small>Cook · WST $9.50 an hour · Cash</small></div><span class="pill">Overtime 1.5×</span></div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="chapter" id="step-hours">
+            <div class="wrap chapter-grid flip">
+              <div class="chapter-copy reveal">
+                <p class="time"><span>02</span> Friday · 5:00pm</p>
+                <h3>Put in the week’s hours.</h3>
+                <p>Type start and finish times, or copy a normal day across the week. Overtime, sick days, annual leave and public holidays are paid at the right rates. You don’t need a time clock, but if you have a ZKTeco machine we can connect it later.</p>
+                <ul class="ticks"><li>The whole team on one screen</li><li>Leave days paid for you</li><li>Late minutes aren’t paid</li></ul>
+              </div>
+              <figure class="chapter-art shot reveal-art">
+                <img src="assets/app/hours-team-week.jpg" width="1500" height="826" loading="lazy" alt="Team week in Connect Payroll: six staff with hours for each day, totals and Done status">
+              </figure>
+            </div>
+          </li>
+
+          <li class="chapter" id="step-check">
+            <div class="wrap chapter-grid">
+              <div class="chapter-copy reveal">
+                <p class="time"><span>03</span> Monday · 9:00am</p>
+                <h3>Check it before anyone’s paid.</h3>
+                <p>PAYE comes straight from Revenue’s weekly, fortnightly and monthly tables. NPF is 10% from the worker and 10% from you, and ACC is 1%. If something looks wrong, like missing hours or deductions that are too high, you’ll see it before you approve.</p>
+                <ul class="ticks"><li>Fortnightly tax balanced across both weeks</li><li>A warning if deductions go over 35%</li><li>Nothing is final until you approve it</li></ul>
+              </div>
+              <figure class="chapter-art shot tilt reveal-art">
+                <img src="assets/app/payroll.jpg" width="1500" height="1243" loading="lazy" alt="Payroll check screen: base earnings WST $2,695.67, taken off pay WST $520.78, net pay WST $2,219.89, six employees marked Ready">
+                <span class="float-tag t1" aria-hidden="true">PAYE ✓</span>
+                <span class="float-tag t2" aria-hidden="true">NPF 10% ✓</span>
+                <span class="float-tag t3" aria-hidden="true">ACC 1% ✓</span>
+              </figure>
+            </div>
+          </li>
+
+          <li class="chapter" id="step-pay">
+            <div class="wrap chapter-grid flip">
+              <div class="chapter-copy reveal">
+                <p class="time"><span>04</span> Wednesday · Aso Totogi</p>
+                <h3>Payday.</h3>
+                <p>Approve the pay run, then print or email the payslips and take the bank list to your bank. If you pay in cash, the cash sheet tells you which notes and coins go in each envelope, rounded up to the next 10 sene.</p>
+                <ul class="ticks"><li>A payslip for every person</li><li>A bank list and a cash sheet</li><li>Every pay run saved, so you can look back any time</li></ul>
+              </div>
+              <div class="chapter-art photo-stack payday-stack reveal-art">
+                <img class="photo" src="assets/people/payday.jpg" width="1448" height="1086" loading="lazy" alt="A worker sitting outside his workshop at the end of the day, smiling at his payslip on his phone">
+                <div class="payslip">
+                  <div class="payslip-head"><span>WAGE STATEMENT</span><b>Your Business</b></div>
+                  <div class="payslip-name"><b>Malia Tuilagi</b><small>12–18 Oct · Paid 21 Oct</small></div>
+                  <dl>
+                    <div><dt>Hours · 40.00</dt><dd>420.00</dd></div>
+                    <div><dt>PAYE</dt><dd>−26.40</dd></div>
+                    <div><dt>NPF employee</dt><dd>−42.00</dd></div>
+                    <div><dt>ACC employee</dt><dd>−4.20</dd></div>
+                  </dl>
+                  <div class="payslip-net"><span>Net pay</span><b>WST 347.40</b></div>
+                  <div class="coins" aria-hidden="true"><i class="note n100">100</i><i class="note n100">100</i><i class="note n100">100</i><i class="note n20">20</i><i class="note n20">20</i><i class="coin">5</i><i class="coin">2</i><i class="coin sm">20s</i><i class="coin sm">20s</i></div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <!-- RETURNS -->
+      <section class="returns" id="returns" aria-labelledby="returns-title">
+        <div class="wrap returns-grid">
+          <div class="returns-copy reveal">
+            <p class="eyebrow light">05 · Month end</p>
+            <h2 id="returns-title">Your P4, ready to sign.</h2>
+            <p>Choose the month and Connect Payroll adds up every pay run for you. This is the actual P4 it prints, laid out like Revenue’s form, so all you do is check it and sign. Your SNPF schedule is ready too, with the full 20% for each person.</p>
+            <div class="due">
+              <div><b>7th</b><span>SNPF schedule and payment due</span></div>
+              <div><b>15th</b><span>P4 and PAYE due to Revenue</span></div>
+            </div>
+          </div>
+          <figure class="p4-paper reveal-art">
+            <img src="assets/app/p4-form.jpg" width="1400" height="1520" loading="lazy" alt="A P4 salary and wage tax return printed by Connect Payroll for a sample business in October 2026, with three staff and total tax to pay of $173.83">
+            <span class="stamp" aria-hidden="true">Ready to sign</span>
+          </figure>
+        </div>
+      </section>
+
+      <!-- PHONE -->
+      <section class="pocket" aria-labelledby="pocket-title">
+        <div class="wrap pocket-grid">
+          <div class="pocket-phones reveal-art">
+            <figure class="device phone p-left"><img src="assets/app/payroll-phone.jpg" width="700" height="1376" loading="lazy" alt="Payroll on a phone"></figure>
+            <figure class="device phone p-right"><img src="assets/app/home-phone.jpg" width="700" height="1376" loading="lazy" alt="Home screen on a phone"></figure>
+          </div>
+          <div class="pocket-copy reveal">
+            <p class="eyebrow">06 · Anywhere</p>
+            <h2 id="pocket-title">Do payroll from your phone.</h2>
+            <p>At the shop, on the ferry to Savai’i, or at home after lotu. It works in your phone’s web browser, so there’s nothing to download.</p>
+            <ul class="ticks"><li>Works on any phone or computer</li><li>Only people you invite can sign in</li><li>Bank numbers stay hidden on screen</li></ul>
           </div>
         </div>
       </section>
 
-      <section class="signal-bar" aria-label="Connect Payroll product principles">
-        <div class="shell signal-grid">
-          <p>Payroll without the guesswork</p>
-          <span><b>01</b> Add your people</span><span><b>02</b> Enter their pay</span><span><b>03</b> Check and finish</span>
-        </div>
-      </section>
-
-      <section class="section" id="workflow">
-        <div class="shell">
-          <div class="section-intro"><p class="eyebrow">Payroll in three simple steps</p><h2>If you can fill in a form, you can run payroll.</h2><p>Connect Payroll guides you through one job at a time, explains unfamiliar fields, and shows what still needs attention.</p></div>
-          <div class="feature-grid">
-            <article class="feature-tile tint-blue"><span class="feature-number">01</span><span class="feature-icon line-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8M19 8v6M22 11h-6"/></svg></span><h3>Add your employees</h3><p>Enter each person’s name, pay rate and payment method. Plain-English help explains what every field means.</p><a href="#contact">Get help setting up <span aria-hidden="true">→</span></a></article>
-            <article class="feature-tile tint-mint"><span class="feature-number">02</span><span class="feature-icon line-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4zM8 9h8M8 13h3M14 13h2"/></svg></span><h3>Enter this period’s pay</h3><p>Confirm normal pay or enter ordinary hours, overtime, allowances, bonuses, leave and deductions.</p><a href="#outputs">See what you receive <span aria-hidden="true">→</span></a></article>
-            <article class="feature-tile tint-lilac"><span class="feature-number">03</span><span class="feature-icon line-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6M4 21h16"/></svg></span><h3>Check and finish</h3><p>Review gross pay, PAYE, NPF, ACC and net pay. Fix anything unusual, then create the documents you need.</p><a href="#security">How your data is protected <span aria-hidden="true">→</span></a></article>
+      <!-- PRODUCT -->
+      <section class="product" id="product" aria-labelledby="product-title">
+        <div class="wrap">
+          <div class="product-head reveal">
+            <p class="eyebrow">What’s included</p>
+            <h2 id="product-title">All of payday, in one place.</h2>
+            <p class="section-lede">No more rebuilding the spreadsheet every week or double-checking someone else’s formulas.</p>
+          </div>
+          <div class="bento">
+            <article class="tile tile-wide reveal">
+              <div class="tile-copy"><span class="tile-ic">◷</span><h3>Hours &amp; attendance</h3><p>See the whole team’s week at once. Overtime, sick leave, annual leave and public holidays are all paid correctly.</p></div>
+              <img src="assets/app/hours-team-week.jpg" width="1500" height="826" loading="lazy" alt="" class="tile-shot">
+            </article>
+            <article class="tile reveal"><span class="tile-ic">₮</span><h3>PAYE, NPF &amp; ACC</h3><p>Worked out from Revenue’s tables every time, with NPF at 10% + 10% and ACC at 1%.</p></article>
+            <article class="tile reveal"><span class="tile-ic">▤</span><h3>Payslips</h3><p>A clear payslip for each person. Email them, or print two or four on a page.</p></article>
+            <article class="tile reveal"><span class="tile-ic">⧉</span><h3>Bank &amp; cash lists</h3><p>A bank list for internet banking, and a cash sheet with the exact notes and coins.</p></article>
+            <article class="tile tile-dark reveal"><span class="tile-ic">P4</span><h3>P4 &amp; SNPF returns</h3><p>Printed in Revenue’s layout, along with your SNPF schedule. Due dates show on your Home screen.</p></article>
+            <article class="tile reveal"><span class="tile-ic">☂</span><h3>Leave</h3><p>Annual, sick and bereavement leave. Balances build up by themselves every payday.</p></article>
+            <article class="tile reveal"><span class="tile-ic">⇄</span><h3>Loans &amp; advances</h3><p>Set up the repayment once. It comes off each pay until it’s paid back, and shows on the payslip.</p></article>
+            <article class="tile reveal"><span class="tile-ic">☰</span><h3>Reports &amp; history</h3><p>Payroll registers and PAYE, NPF and ACC reports for any dates. Every past pay run is kept.</p></article>
+            <article class="tile reveal"><span class="tile-ic">⚿</span><h3>Kept private</h3><p>Sign-in by invitation only, bank numbers encrypted, and a record of who approved what.</p></article>
           </div>
         </div>
       </section>
 
-      <section class="section workflow-section" id="outputs">
-        <div class="shell workflow-grid">
-          <div class="section-intro"><p class="eyebrow">Everything you need after payroll</p><h2>Clear documents, ready to use.</h2><p>Download the right information for employees, payments, management and Samoa statutory preparation—without rebuilding it in another spreadsheet.</p><a class="button button-dark" href="mailto:sales@connectpayroll.ws?subject=Connect%20Payroll%20demo">Request a walkthrough <span aria-hidden="true">→</span></a></div>
-          <div class="output-grid" aria-label="Payroll documents and reports">
-            <article><span class="output-icon" aria-hidden="true">01</span><div><h3>Employee payslips</h3><p>Email individual PDFs or print them for staff without email.</p></div></article>
-            <article><span class="output-icon" aria-hidden="true">02</span><div><h3>Payment registers</h3><p>Separate bank and cash lists make payday easier to organise.</p></div></article>
-            <article><span class="output-icon" aria-hidden="true">03</span><div><h3>Cash worksheet</h3><p>Work out the Samoa notes and coins needed for cash wages.</p></div></article>
-            <article><span class="output-icon" aria-hidden="true">04</span><div><h3>PAYE, NPF and ACC</h3><p>See preparation totals and reports for the period you choose.</p></div></article>
-            <article><span class="output-icon" aria-hidden="true">05</span><div><h3>Payroll register</h3><p>Keep a complete record of gross pay, deductions and net pay.</p></div></article>
-            <article><span class="output-icon" aria-hidden="true">06</span><div><h3>Payroll history</h3><p>Return to previous runs and see what was finalised and paid.</p></div></article>
+      <!-- WHO IT'S FOR -->
+      <section class="fits" aria-labelledby="fits-title">
+        <div class="wrap">
+          <div class="fits-head reveal">
+            <p class="eyebrow">Who uses it</p>
+            <h2 id="fits-title">Built for businesses like yours.</h2>
+            <p class="section-lede">Whether it’s a family fale’oloa with three staff or a resort with shift workers on Upolu and Savai’i.</p>
+          </div>
+          <div class="fits-photos">
+            <figure class="fit-photo reveal"><img src="assets/people/detailing.jpg" width="1448" height="1086" loading="lazy" alt="A young man polishing a white car in an open-sided workshop"><figcaption><b>Workshops &amp; detailing</b><small>Mechanics and valeters paid by the hour, with overtime.</small></figcaption></figure>
+            <figure class="fit-photo reveal"><img src="assets/people/housekeeping.jpg" width="1448" height="1086" loading="lazy" alt="A housekeeper folding towels in a beach fale with the lagoon behind her"><figcaption><b>Resorts, fales &amp; holiday homes</b><small>Housekeeping, kitchen and grounds staff on different rosters.</small></figcaption></figure>
+            <figure class="fit-photo reveal"><img src="assets/people/cashier.jpg" width="1448" height="1086" loading="lazy" alt="A cashier handing change to a customer at a small supermarket"><figcaption><b>Shops &amp; supermarkets</b><small>Cashiers and shelf staff on weekly pay, with bus fare allowances.</small></figcaption></figure>
+            <figure class="fit-photo reveal"><img src="assets/people/builders.jpg" width="1448" height="1086" loading="lazy" alt="Three builders in hard hats on a building site, one reading plans"><figcaption><b>Construction &amp; trades</b><small>Site crews, daily allowances and advances between paydays.</small></figcaption></figure>
+          </div>
+          <ul class="fits-more reveal">
+            <li><b>Cafés &amp; restaurants</b> shift hours and weekend overtime</li>
+            <li><b>Cleaning &amp; security</b> night shifts across different sites</li>
+            <li><b>Offices &amp; services</b> monthly salaries and tidy reports</li>
+            <li><b>Churches, schools &amp; NGOs</b> staff on a set salary</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- PRICING -->
+      <section class="pricing" id="pricing" aria-labelledby="pricing-title">
+        <div class="wrap">
+          <div class="pricing-head reveal">
+            <p class="eyebrow">Pricing</p>
+            <h2 id="pricing-title">Straightforward pricing, in tala.</h2>
+            <p class="section-lede">You pay per business, per month, and only for the staff who are active that month.</p>
+          </div>
+          <div class="plans">
+            <article class="plan reveal">
+              <h3>Core</h3>
+              <p class="plan-for">Everyday payroll for most businesses.</p>
+              <p class="price"><span class="cur">WST</span><b>39</b><span class="per">/month<br>+ WST 5 per active employee</span></p>
+              <p class="min">Minimum WST 69 a month</p>
+              <ul class="ticks">
+                <li>Weekly, fortnightly and monthly pay</li>
+                <li>Hours and attendance</li>
+                <li>PAYE, NPF and ACC worked out</li>
+                <li>Payslips, bank and cash lists</li>
+                <li>P4 return and SNPF schedule</li>
+              </ul>
+              <a class="btn btn-ocean" href="#contact">Start with Core</a>
+            </article>
+            <article class="plan plan-featured reveal">
+              <span class="ribbon">Most features</span>
+              <h3>Plus</h3>
+              <p class="plan-for">For bigger teams, or more than one site.</p>
+              <p class="price"><span class="cur">WST</span><b>59</b><span class="per">/month<br>+ WST 7 per active employee</span></p>
+              <p class="min">Minimum WST 94 a month</p>
+              <ul class="ticks">
+                <li>Everything in Core</li>
+                <li>Loans and advances</li>
+                <li>Leave requests</li>
+                <li>Multiple sites</li>
+                <li>Employee portal</li>
+              </ul>
+              <a class="btn btn-primary" href="#contact">Start with Plus</a>
+            </article>
+          </div>
+          <div class="examples reveal">
+            <p>What you’d pay each month</p>
+            <table>
+              <thead><tr><th>Active staff</th><th>Core</th><th>Plus</th></tr></thead>
+              <tbody>
+                <tr><td>5</td><td>WST 69</td><td>WST 94</td></tr>
+                <tr><td>10</td><td>WST 89</td><td>WST 129</td></tr>
+                <tr><td>20</td><td>WST 139</td><td>WST 199</td></tr>
+              </tbody>
+            </table>
+            <small>The minimum only matters for small teams. It’s never added on top.</small>
           </div>
         </div>
       </section>
 
-      <section class="section pricing-section" id="pricing">
-        <div class="shell">
-          <div class="section-intro"><p class="eyebrow">Straightforward plans</p><h2>Pay for what your business needs.</h2><p>We quote in WST after learning how many people you pay and which tools you need. You see and approve the price before anything begins.</p></div>
-          <div class="pricing-grid">
-            <article class="pricing-card featured"><p class="eyebrow">For simple payroll</p><h3>Core</h3><span class="pricing-price">Request a quote <small>Quoted in WST for your business</small></span><p>Everything one payroll officer needs to set up staff, run payroll and produce the main documents.</p><ul class="pricing-list"><li>Weekly, fortnightly or monthly pay schedules</li><li>Employee setup, payslips and PAYE/NPF/ACC reports</li><li>Bank, cash and payroll registers</li></ul><a class="button button-primary plan-button" href="mailto:sales@connectpayroll.ws?subject=Connect%20Payroll%20Core%20quote">Ask about Core <span aria-hidden="true">→</span></a></article>
-            <article class="pricing-card"><p class="eyebrow">For more payroll tools</p><h3>Plus</h3><span class="pricing-price">Request a quote <small>Quoted in WST for your business</small></span><p>Add more employee, leave, attendance and reporting tools as your operation grows.</p><ul class="pricing-list"><li>Everything in Core</li><li>More employee and leave management</li><li>Expanded reporting and attendance options</li></ul><a class="button button-dark plan-button" href="mailto:sales@connectpayroll.ws?subject=Connect%20Payroll%20Plus%20quote">Ask about Plus <span aria-hidden="true">→</span></a></article>
+      <!-- LOCAL TEAM -->
+      <section class="team" id="team" aria-labelledby="team-title">
+        <div class="wrap team-grid">
+          <div class="team-copy reveal">
+            <p class="eyebrow light">Made in Apia</p>
+            <h2 id="team-title">We’re Connect IT, and we’re just down the road.</h2>
+            <p>We built Connect Payroll in Apia, and we use it to pay our own staff. It’s made for the way businesses here pay people, with cash wages, fortnightly PAYE, SNPF and ACC. If you get stuck, give us a call.</p>
+            <div class="team-contacts">
+              <a href="tel:+68527313"><span>Call</span><b>+685 27313</b></a>
+              <a href="tel:+68527333"><span>or</span><b>+685 27333</b></a>
+            </div>
           </div>
-          <p class="pricing-note">Connect Payroll prepares payroll records and outputs for your review. It does not automatically charge a card or claim to file statutory returns on your behalf.</p>
+          <ul class="safe reveal">
+            <li><b>Your business only</b><span>Only people you invite can sign in, and each business is kept separate.</span></li>
+            <li><b>Bank numbers kept safe</b><span>Stored encrypted and hidden on everyday screens.</span></li>
+            <li><b>Nothing changes quietly</b><span>Once a pay run is approved it’s locked, and you can see who did what.</span></li>
+            <li><b>You’re in charge</b><span>Connect Payroll gets everything ready. You approve it and pay your staff.</span></li>
+          </ul>
         </div>
       </section>
 
-      <section class="section optional-section">
-        <div class="shell optional-card"><div class="optional-mark" aria-hidden="true">+</div><div><p class="eyebrow">Optional when you need it</p><h2>Attendance can connect later.</h2><p>Start with manual payroll even if your team does not use a biometric clock. When you are ready, ZKTeco and ZKBio Zlink attendance can be added as an input—not a requirement.</p></div><a class="text-link" href="mailto:sales@connectpayroll.ws?subject=Attendance%20integration%20question">Ask about attendance <span aria-hidden="true">→</span></a></div>
-      </section>
-
-      <section class="section local-section">
-        <div class="shell local-card">
-          <div class="local-symbol" aria-hidden="true"><img src="assets/connect-payroll-mark.png" width="120" height="120" alt=""></div>
-          <div><p class="eyebrow">Built in Samoa</p><h2>Local payroll, backed by a local team.</h2><p>Connect Payroll is created by Connect IT in Samoa. We are building it around the way local businesses actually pay their people—not around an overseas template.</p></div>
-          <div class="local-points"><span><b>WST</b> from the start</span><span><b>Pacific/Apia</b> time</span><span><b>Real people</b> for support</span></div>
-        </div>
-      </section>
-
-      <section class="section security-section" id="security">
-        <div class="shell security-grid">
-          <div><p class="eyebrow">Built for responsible payroll work</p><h2>Your payroll stays private and controlled.</h2><p>Only the people you invite can open your business payroll. Bank details are hidden on everyday screens, and important changes are kept in the history.</p></div>
-          <div class="security-points"><div><span class="security-icon" aria-hidden="true">◆</span><div><h3>Only invited people can enter</h3><p>Employee, bank and payroll details are limited to authorised users.</p></div></div><div><span class="security-icon" aria-hidden="true">↻</span><div><h3>You can see what changed</h3><p>Finalised and paid payroll runs keep a clear record for later.</p></div></div><div><span class="security-icon" aria-hidden="true">✓</span><div><h3>You stay in control</h3><p>Connect Payroll prepares the work; your payroll officer checks and approves payment.</p></div></div></div>
-        </div>
-      </section>
-
-      <section class="section faq-section" id="faq">
-        <div class="shell faq-grid">
-          <div class="section-intro"><p class="eyebrow">Common questions</p><h2>Good to know before you start.</h2><p>If your business works differently, talk to us. Payroll should fit the business—not the other way around.</p></div>
+      <!-- FAQ -->
+      <section class="faq" aria-labelledby="faq-title">
+        <div class="wrap faq-grid">
+          <div class="reveal">
+            <p class="eyebrow">Questions</p>
+            <h2 id="faq-title">Common questions.</h2>
+          </div>
           <div class="faq-list">
-            <details><summary>Do I need to be a payroll expert?</summary><p>No. The setup explains each field in plain language, and our team can help you with the first run.</p></details>
-            <details><summary>Do employees need to clock in?</summary><p>No. You can run payroll completely by hand. Attendance can be added later if your business needs it.</p></details>
-            <details><summary>Can we pay weekly, fortnightly or monthly?</summary><p>Yes. You choose the schedule and the day each pay period begins.</p></details>
-            <details><summary>Can one person run payroll?</summary><p>Yes. Connect Payroll does not force a complicated approval chain. You can invite more payroll officers if needed.</p></details>
-            <details><summary>Does it pay staff or file returns automatically?</summary><p>No. It prepares payslips, payment registers and statutory reports for you to check and use.</p></details>
+            <details><summary>Do I need to know payroll?</summary><p>No. If you can fill in a form, you can do payday. Every field has a short explanation, and the Home screen tells you what to do next.</p></details>
+            <details><summary>Do my staff need a time clock?</summary><p>No. You can type the hours in, or copy a normal day. If you already use ZKTeco or ZKBio, we can connect it later.</p></details>
+            <details><summary>Does it follow Samoa’s PAYE, NPF and ACC rules?</summary><p>Yes. PAYE uses Revenue’s weekly, fortnightly and monthly tables. NPF is 10% from the worker and 10% from you, and ACC is 1%.</p></details>
+            <details><summary>Can I pay some staff in cash?</summary><p>Yes. The cash sheet shows which notes and coins to count for each person, rounded up to the next 10 sene.</p></details>
+            <details><summary>Does it pay my staff or file returns for me?</summary><p>No. You still pay through your bank or in cash, and you hand in the P4 and SNPF schedule yourself. Connect Payroll gets it all ready and printed.</p></details>
+            <details><summary>Can I try it first?</summary><p>Yes. Call or message us and we’ll walk you through it using your own business.</p></details>
           </div>
         </div>
       </section>
 
-      <section class="section contact-section" id="contact">
-        <div class="shell contact-card"><div><p class="eyebrow">Ready to simplify payroll?</p><h2>Let’s talk about how your business pays people.</h2><p>Tell us how you run payroll today and we’ll help map the simplest way to get started.</p></div><div class="contact-actions"><a class="button button-primary" href="mailto:sales@connectpayroll.ws?subject=Connect%20Payroll%20enquiry">Email sales@connectpayroll.ws <span aria-hidden="true">→</span></a><a class="contact-login" href="https://app.connectpayroll.ws">Already have access? Sign in <span aria-hidden="true">↗</span></a></div></div>
+      <!-- CONTACT -->
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+                <div class="wrap contact-inner reveal">
+          <p class="eyebrow light">Manuia le aso totogi</p>
+          <h2 id="contact-title">Want to see it with your own staff?</h2>
+          <p>Tell us how you pay your team now, and we’ll show you how it would work in Connect Payroll. It’s free, and there’s no pressure to sign up.</p>
+          <div class="contact-cards">
+            <a class="contact-card" href="tel:+68527313"><span class="ic">☏</span><span>Call us</span><b>+685 27313</b><small>or +685 27333</small></a>
+            <a class="contact-card" href="https://www.facebook.com/connectitsamoa" rel="noopener"><span class="ic">f</span><span>Message us</span><b>Facebook</b><small>facebook.com/connectitsamoa</small></a>
+            <a class="contact-card" href="mailto:sales@connectpayroll.ws?subject=Connect%20Payroll%20walkthrough"><span class="ic">@</span><span>Email us</span><b>sales@</b><small>connectpayroll.ws</small></a>
+          </div>
+          <p class="already">Already a customer? <a href="https://app.connectpayroll.ws">Sign in →</a></p>
+        </div>
       </section>
     </main>
 
-    <footer class="site-footer"><div class="shell footer-wrap"><a class="brand footer-brand" href="#top" aria-label="Connect Payroll home"><img class="brand-mark" src="assets/connect-payroll-mark.png" width="42" height="42" alt=""><span><strong>Connect</strong><b>Payroll</b></span></a><p>Simple payroll for Samoa businesses.</p><div class="footer-links"><a href="mailto:sales@connectpayroll.ws">Sales</a><a href="mailto:support@connectpayroll.ws">Support</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="security.html">Security</a><a href="support.html">Help</a><a href="https://app.connectpayroll.ws">Sign in</a></div></div><div class="shell legal-line"><span>© 2026 Connect IT Ltd</span><span>Payroll software and local support · Samoa</span></div></footer>
+    <footer class="footer">
+      <div class="wrap footer-inner">
+        <a class="brand" href="#top"><img src="assets/logo-96.png" width="40" height="40" alt=""><span><b>Connect</b> Payroll</span></a>
+        <p>Payroll made for Samoa. By Connect IT Ltd, Apia.</p>
+        <nav aria-label="Footer">
+          <a href="support.html">Help</a>
+          <a href="security.html">Security</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="https://www.facebook.com/connectitsamoa" rel="noopener">Facebook</a>
+          <a href="https://app.connectpayroll.ws">Sign in</a>
+        </nav>
+      </div>
+      <p class="wrap copyright">© 2026 Connect IT Ltd · Apia, Samoa · Fa’afetai for choosing local. Photos are illustrative.</p>
+    </footer>
   </body>
 </html>
