@@ -339,18 +339,21 @@ em { font-style: normal; color: var(--coral); }
 .plan .btn { justify-self: start; }
 .plan-featured { background: linear-gradient(var(--white), var(--white)) padding-box, linear-gradient(135deg, var(--sun), var(--coral), var(--hibiscus)) border-box; border: 2px solid transparent; }
 .ribbon { position: absolute; top: 24px; right: 24px; padding: 6px 14px; border-radius: 999px; background: linear-gradient(135deg, var(--sun), var(--coral)); color: #2a0f05; font-weight: 900; font-size: .78rem; }
-.addon { max-width: 864px; margin: 24px auto 0; padding: 32px 34px; border-radius: 28px; background: var(--white); border: 1px dashed var(--line); box-shadow: var(--shadow-soft); display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 28px; align-items: center; }
-.addon h3 { font-size: 1.5rem; }
-.addon-tag { font-weight: 900; font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; color: var(--siapo); margin-bottom: 6px; }
-.addon .ticks { margin-top: 18px; }
-.addon-price { display: grid; gap: 16px; justify-items: start; }
-.addon-price .price { margin-top: 0; }
-.brands { grid-column: 1 / -1; border-top: 1px solid var(--line); padding-top: 22px; }
-.brands-label { font-weight: 900; font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin-bottom: 14px; }
-.brand-logos { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 18px 30px; }
-.brand-logos img { display: block; height: 24px; width: auto; max-width: 120px; object-fit: contain; filter: grayscale(1) brightness(0); opacity: .55; }
-.brands small { display: block; margin-top: 16px; color: var(--muted); font-size: .8rem; }
-.examples { max-width: 600px; margin: 44px auto 0; text-align: center; }
+.addon { max-width: 864px; margin: 28px auto 0; border-radius: 28px; background: var(--white); border: 1px solid var(--line); box-shadow: var(--shadow-soft); display: grid; grid-template-columns: minmax(0, 1fr) 280px; overflow: hidden; }
+.addon-main { padding: 36px 34px 30px; }
+.addon-tag { display: inline-block; padding: 5px 12px; border-radius: 999px; background: #e7eefc; color: var(--blue-dark); font-weight: 900; font-size: .74rem; letter-spacing: .06em; text-transform: uppercase; margin-bottom: 14px; }
+.addon h3 { font-size: 1.7rem; }
+.addon-lede { color: var(--muted); margin-top: 8px; }
+.addon-ticks { margin-top: 20px; }
+.addon-price { padding: 36px 30px; background: var(--sand); border-left: 1px solid var(--line); display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 6px; }
+.addon-price .price { margin: 0; }
+.addon-price-note { color: var(--muted); font-size: .92rem; margin-bottom: 14px; }
+.brands { grid-column: 1 / -1; padding: 26px 34px 30px; border-top: 1px solid var(--line); background: #fcfaf6; }
+.brands-label { font-weight: 900; font-size: .76rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin-bottom: 14px; text-align: center; }
+.brand-logos { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; }
+.brand-logos li { height: 64px; display: flex; align-items: center; justify-content: center; padding: 12px 16px; background: var(--white); border: 1px solid var(--line); border-radius: 14px; }
+.brand-logos img { display: block; width: 100%; height: 100%; max-height: 30px; object-fit: contain; }
+.brands-note { margin-top: 16px; color: var(--muted); font-size: .82rem; text-align: center; }.examples { max-width: 600px; margin: 44px auto 0; text-align: center; }
 .examples p { font-weight: 900; color: var(--ink); margin-bottom: 12px; }
 .examples table { width: 100%; border-collapse: separate; border-spacing: 0; background: var(--white); border-radius: 18px; overflow: hidden; border: 1px solid var(--line); font-variant-numeric: tabular-nums; }
 .examples th, .examples td { padding: 14px 18px; border-bottom: 1px solid var(--line); }
@@ -492,7 +495,13 @@ em { font-style: normal; color: var(--coral); }
   .fits-photos, .fits-more { grid-template-columns: minmax(0, 1fr); }
   .fit-photo { aspect-ratio: 4 / 3; }
   .bento, .plans, .contact-cards, .legal-grid, .support-grid { grid-template-columns: minmax(0, 1fr); }
-  .addon { grid-template-columns: minmax(0, 1fr); padding: 28px 24px; }
+  .addon { grid-template-columns: minmax(0, 1fr); }
+  .addon-main { padding: 28px 22px 24px; }
+  .addon-price { border-left: 0; border-top: 1px solid var(--line); padding: 24px 22px; }
+  .addon-price .btn { width: 100%; }
+  .brands { padding: 22px 16px 24px; }
+  .brand-logos { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .brand-logos li { height: 58px; }
   .legal-page .topbar-actions { display: flex; }
   .legal-page .topbar-actions .btn-primary { display: none; }
   .tile-wide { grid-column: auto; grid-row: auto; }
