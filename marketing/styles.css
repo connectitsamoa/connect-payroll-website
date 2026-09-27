@@ -339,6 +339,17 @@ em { font-style: normal; color: var(--coral); }
 .plan .btn { justify-self: start; }
 .plan-featured { background: linear-gradient(var(--white), var(--white)) padding-box, linear-gradient(135deg, var(--sun), var(--coral), var(--hibiscus)) border-box; border: 2px solid transparent; }
 .ribbon { position: absolute; top: 24px; right: 24px; padding: 6px 14px; border-radius: 999px; background: linear-gradient(135deg, var(--sun), var(--coral)); color: #2a0f05; font-weight: 900; font-size: .78rem; }
+.addon { max-width: 864px; margin: 24px auto 0; padding: 32px 34px; border-radius: 28px; background: var(--white); border: 1px dashed var(--line); box-shadow: var(--shadow-soft); display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 28px; align-items: center; }
+.addon h3 { font-size: 1.5rem; }
+.addon-tag { font-weight: 900; font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; color: var(--siapo); margin-bottom: 6px; }
+.addon .ticks { margin-top: 18px; }
+.addon-price { display: grid; gap: 16px; justify-items: start; }
+.addon-price .price { margin-top: 0; }
+.brands { grid-column: 1 / -1; border-top: 1px solid var(--line); padding-top: 22px; }
+.brands-label { font-weight: 900; font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin-bottom: 14px; }
+.brand-logos { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 18px 30px; }
+.brand-logos img { display: block; height: 24px; width: auto; max-width: 120px; object-fit: contain; filter: grayscale(1) brightness(0); opacity: .55; }
+.brands small { display: block; margin-top: 16px; color: var(--muted); font-size: .8rem; }
 .examples { max-width: 600px; margin: 44px auto 0; text-align: center; }
 .examples p { font-weight: 900; color: var(--ink); margin-bottom: 12px; }
 .examples table { width: 100%; border-collapse: separate; border-spacing: 0; background: var(--white); border-radius: 18px; overflow: hidden; border: 1px solid var(--line); font-variant-numeric: tabular-nums; }
@@ -481,6 +492,7 @@ em { font-style: normal; color: var(--coral); }
   .fits-photos, .fits-more { grid-template-columns: minmax(0, 1fr); }
   .fit-photo { aspect-ratio: 4 / 3; }
   .bento, .plans, .contact-cards, .legal-grid, .support-grid { grid-template-columns: minmax(0, 1fr); }
+  .addon { grid-template-columns: minmax(0, 1fr); padding: 28px 24px; }
   .legal-page .topbar-actions { display: flex; }
   .legal-page .topbar-actions .btn-primary { display: none; }
   .tile-wide { grid-column: auto; grid-row: auto; }

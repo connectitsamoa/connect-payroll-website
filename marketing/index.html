@@ -26,7 +26,7 @@
     <link rel="preload" href="assets/fonts/lato-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="styles.css">
     <script src="assets/hero.js" defer></script>
-    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"Connect IT Ltd","url":"https://connectpayroll.ws/","logo":"https://connectpayroll.ws/assets/logo-96.png","telephone":"+685 27313","email":"sales@connectpayroll.ws","address":{"@type":"PostalAddress","addressLocality":"Apia","addressCountry":"WS"},"sameAs":["https://www.facebook.com/connectitsamoa"]},{"@type":"SoftwareApplication","name":"Connect Payroll","applicationCategory":"BusinessApplication","operatingSystem":"Web","areaServed":"WS","offers":[{"@type":"Offer","name":"Core","price":"69","priceCurrency":"WST","description":"WST 39 per month plus WST 5 per active employee, minimum WST 69 per month"},{"@type":"Offer","name":"Plus","price":"94","priceCurrency":"WST","description":"WST 59 per month plus WST 7 per active employee, minimum WST 94 per month"}]}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"Connect IT Ltd","url":"https://connectpayroll.ws/","logo":"https://connectpayroll.ws/assets/logo-96.png","telephone":"+685 27313","email":"sales@connectpayroll.ws","address":{"@type":"PostalAddress","addressLocality":"Apia","addressCountry":"WS"},"sameAs":["https://www.facebook.com/connectitsamoa"]},{"@type":"SoftwareApplication","name":"Connect Payroll","applicationCategory":"BusinessApplication","operatingSystem":"Web","areaServed":"WS","offers":[{"@type":"Offer","name":"Core","price":"69","priceCurrency":"WST","description":"WST 39 per month plus WST 5 per active employee, minimum WST 69 per month"},{"@type":"Offer","name":"Plus","price":"94","priceCurrency":"WST","description":"WST 59 per month plus WST 7 per active employee, minimum WST 94 per month"},{"@type":"Offer","name":"Timesheet and clock import add-on","price":"30","priceCurrency":"WST","description":"WST 30 per month per business, added to Core or Plus. Reads timesheets, time clock exports, PDFs and photos; support for a new time clock added at no extra cost"}]}]}</script>
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
@@ -145,7 +145,7 @@
               <div class="chapter-copy reveal">
                 <p class="time"><span>02</span> Friday · 5:00pm</p>
                 <h3>Put in the week’s hours.</h3>
-                <p>Type start and finish times, or copy a normal day across the week. Overtime, sick days, annual leave and public holidays are paid at the right rates. You don’t need a time clock, but if you have a ZKTeco machine we can connect it later.</p>
+                <p>Type start and finish times, or copy a normal day across the week. Overtime, sick days, annual leave and public holidays are paid at the right rates. You don’t need a time clock, but if you have one, the timesheet and clock import add-on reads its exports.</p>
                 <ul class="ticks"><li>The whole team on one screen</li><li>Leave days paid for you</li><li>Late minutes aren’t paid</li></ul>
               </div>
               <figure class="chapter-art shot reveal-art">
@@ -321,6 +321,39 @@
               <a class="btn btn-primary" href="#contact">Start with Plus</a>
             </article>
           </div>
+          <article class="addon reveal" aria-labelledby="addon-title">
+            <div class="addon-copy">
+              <p class="addon-tag">Add-on for Core or Plus</p>
+              <h3 id="addon-title">Timesheet and clock import</h3>
+              <p class="plan-for">Upload the timesheets you already keep and we read them for you: Excel, CSV, PDF, a photo of a paper timesheet, or the export from your time clock or rostering app. You check each day before anything is saved.</p>
+              <ul class="ticks">
+                <li>Any layout, checked against your file</li>
+                <li>ZKTeco, Hikvision, Dahua, Uniview, Anviz, Suprema, FingerTec and more</li>
+                <li>Apps like Deputy, Tanda and Jibble</li>
+                <li>Using a different clock? Send us an export and we’ll add it at no extra cost</li>
+              </ul>
+            </div>
+            <div class="addon-price">
+              <p class="price"><span class="cur">WST</span><b>30</b><span class="per">/month<br>per business</span></p>
+              <a class="btn btn-ocean" href="#contact">Add it to my plan</a>
+            </div>
+            <div class="brands">
+              <p class="brands-label">Reads exports from</p>
+              <ul class="brand-logos">
+                <li><img src="assets/brands/zkteco.png" alt="ZKTeco" width="96" height="22" loading="lazy"></li>
+                <li><img src="assets/brands/hikvision.svg" alt="Hikvision" width="120" height="16" loading="lazy"></li>
+                <li><img src="assets/brands/dahua.svg" alt="Dahua" width="84" height="26" loading="lazy"></li>
+                <li><img src="assets/brands/uniview.svg" alt="Uniview" width="44" height="26" loading="lazy"></li>
+                <li><img src="assets/brands/anviz.png" alt="Anviz" width="80" height="24" loading="lazy"></li>
+                <li><img src="assets/brands/suprema.png" alt="Suprema" width="110" height="15" loading="lazy"></li>
+                <li><img src="assets/brands/fingertec.png" alt="FingerTec" width="104" height="24" loading="lazy"></li>
+                <li><img src="assets/brands/deputy.svg" alt="Deputy" width="94" height="23" loading="lazy"></li>
+                <li><img src="assets/brands/tanda.svg" alt="Tanda" width="80" height="24" loading="lazy"></li>
+                <li><img src="assets/brands/jibble.svg" alt="Jibble" width="80" height="24" loading="lazy"></li>
+              </ul>
+              <small>Brand names and logos belong to their owners and are shown only to say which exports we read. They don’t endorse Connect Payroll.</small>
+            </div>
+          </article>
           <div class="examples reveal">
             <p>What you’d pay each month</p>
             <table>
@@ -366,7 +399,7 @@
           </div>
           <div class="faq-list">
             <details><summary>Do I need to know payroll?</summary><p>No. If you can fill in a form, you can do payday. Every field has a short explanation, and the Home screen tells you what to do next.</p></details>
-            <details><summary>Do my staff need a time clock?</summary><p>No. You can type the hours in, or copy a normal day. If you already use ZKTeco or ZKBio, we can connect it later.</p></details>
+            <details><summary>Do my staff need a time clock?</summary><p>No. You can type the hours in, or copy a normal day. If you already have a time clock, from ZKTeco, Hikvision, Dahua, Uniview, Anviz or another maker, the timesheet and clock import add-on (WST 30 a month) reads its exports. If yours isn’t read straight away, send us an export and we’ll add it at no extra cost.</p></details>
             <details><summary>Does it follow Samoa’s PAYE, NPF and ACC rules?</summary><p>Yes. PAYE uses Revenue’s weekly, fortnightly and monthly tables. NPF is 10% from the worker and 10% from you, and ACC is 1%.</p></details>
             <details><summary>Can I pay some staff in cash?</summary><p>Yes. The cash sheet shows which notes and coins to count for each person, rounded up to the next 10 sene.</p></details>
             <details><summary>Does it pay my staff or file returns for me?</summary><p>No. You still pay through your bank or in cash, and you hand in the P4 and SNPF schedule yourself. Connect Payroll gets it all ready and printed.</p></details>
